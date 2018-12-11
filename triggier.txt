@@ -1,0 +1,36 @@
+========================create trigger=========================
+CREATE or REPLACE TRIGGER usa_after_insert AFTER INSERT ON usa 
+FOR EACH ROW
+DECLARE
+BEGIN
+insert into usa_backup values(:new.id,:new.state,:new.senator);
+DBMS_OUTPUT.PUT_LINE('Inserted');
+END;
+/    
+
+=======================update trigger==========================                                                 
+create or replace trigger usa_backup_getAutoUpdate after update on usa
+for each row
+declare
+begin
+update usa_backup set id = :new.id,state=:new.state,senator=:new.senator where id = :old.id;
+DBMS_OUTPUT.PUT_LINE('Record updated');
+end;
+/
+
+=========================show error===========================
+show errors trigger name_name
+
+=========================delete a trigger=============
+drop trigger trigger_name
+
+
+=======================trigger for deleting===============
+create or replace trigger usa_backup_delete after delete on usa
+for each row
+declare
+begin
+delete from usa_backup where id=:old.id;
+DBMS_OUTPUT.PUT_LINE('Deleted data');
+end;
+/

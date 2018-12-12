@@ -34,3 +34,7 @@ delete from usa_backup where id=:old.id;
 DBMS_OUTPUT.PUT_LINE('Deleted data');
 end;
 /
+
+==========================how to see all triggers associated with a table=========================
+select trigger_name from dba_triggers where table_name='EMPLOYEE';
+note::table name will be in bold letter

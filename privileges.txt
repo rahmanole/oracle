@@ -1,0 +1,17 @@
+================grant permissions================
+grnat create table,create seesion................. to user_name
+
+=================memorry allocation to user==============
+grant unlimited tablespace to user_name
+alter user user_name quota 500m on system;
+
+===============create role==============
+create role role_name
+
+=============grant permission to role_name=============
+grant create table,........... to role_name
+
+============grant role to user_name===========
+grant role_name to user_name
+
+===>Memory can not be allocated to role.We have to allocate to user

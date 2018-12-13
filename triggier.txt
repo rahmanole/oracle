@@ -34,3 +34,4 @@ delete from usa_backup where id=:old.id;
 DBMS_OUTPUT.PUT_LINE('Deleted data');
 end;
 /
+

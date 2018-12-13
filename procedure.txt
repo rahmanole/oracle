@@ -1,0 +1,38 @@
+==================How to create a procedure==========
+create or replace procedure insertInCst(
+p_id in usa.id%type,
+p_state in usa.state%type,
+p_senator in usa.senator%type)
+is begin
+insert into usa(id,state,senator) values(p_id,p_state,p_senator);
+commit;
+end;
+/
+
+==================How to create a procedure to update value==========
+create or replace procedure updateUsa(
+p_id in usa.id%type,
+p_state in usa.state%type,
+p_senator in usa.senator%type)
+is 
+begin
+update usa set id = p_id,state=p_state,senator=p_senator where id = p_id;
+commit;
+end;
+/
+
+==================How to create a procedure to delete value==========
+create or replace procedure deleteUsa(
+p_id in usa.id%type,
+is 
+begin
+delete from usa where id = p_id;
+commit;
+end;
+/
+
+===============How to insert value using procedure==========
+begin
+ insertInCst(7,'Texas','Mr T');
+ end;
+/

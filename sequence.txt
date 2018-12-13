@@ -1,0 +1,7 @@
+==================cretae a sequence===============
+create sequence emp_seq
+start with 100
+increment by 1
+maxvalue 1000
+nocache
+nocycle;

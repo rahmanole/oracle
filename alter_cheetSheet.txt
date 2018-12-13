@@ -1,0 +1,43 @@
+Oracle ALTER TABLE Statement
+=========================ADD New Column=====================================
+    ALTER TABLE customers  
+      ADD customer_age varchar2(50);  
+=========================ADD Multiple columns=====================================
+    ALTER TABLE customers  
+      ADD (customer_type varchar2(50),  
+           customer_address varchar2(50));  
+
+=========================MODIFY New Column=====================================
+   ALTER TABLE customers  
+      MODIFY customer_name varchar2(100) not null;  
+
+=========================Chagne datatype or add constraint=====================================
+
+    ALTER TABLE customers  
+      MODIFY (customer_name varchar2(100) not null,  
+              city varchar2(100));  
+
+=========================DROP A Column=====================================
+    ALTER TABLE customers  
+      DROP COLUMN customer_name;  
+
+=========================RENAME Column=====================================
+
+    ALTER TABLE customers  
+     RENAME COLUMN customer_name to cname;  
+
+=========================RENAME Table=====================================
+
+    ALTER TABLE customers  
+    RENAME TO retailers;
+
+===>We can delete or add multiple coloumn just using comma
+
+=========================Make a table readonly==================
+Alter table table_name read ony
+
+=========================Make a table read and updateable==================
+Alter table table_name read write
+  
+
+

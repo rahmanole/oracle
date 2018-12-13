@@ -1,0 +1,16 @@
+===============Add constraint at last during table creation=============
+constraint cs_name foreign key(col_name) references another_table(col_name)
+
+===============add foreign key with alter========
+ alter table employee add foreign key(dep_id) references department(id);
+
+===============Add constraint beside the col name during table creation=============
+Person_ID number(5) FOREIGN KEY REFERENCES Persons(PersonID)
+
+
+==========Add foreign key after table creation==============
+alter table table_name add constraint 
+
+===============add primary key with alter=============
+alter table table_name add primary key(col_name);
+

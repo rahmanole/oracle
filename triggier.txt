@@ -35,3 +35,9 @@ DBMS_OUTPUT.PUT_LINE('Deleted data');
 end;
 /
 
+<<<<<<< HEAD
+=======
+==========================how to see all triggers associated with a table=========================
+select trigger_name from dba_triggers where table_name='EMPLOYEE';
+note::table name will be in bold letter
+>>>>>>> 451e3b83f66d896a0f6f47ce4eb7ea65838b24e7

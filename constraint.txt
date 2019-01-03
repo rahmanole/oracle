@@ -1,8 +1,9 @@
+===============add foreign key with alter========
+ alter table employee add foreign key(dep_id) references department(id);
+
 ===============Add constraint at last during table creation=============
 constraint cs_name foreign key(col_name) references another_table(col_name)
 
-===============add foreign key with alter========
- alter table employee add foreign key(dep_id) references department(id);
 
 ===============Add constraint beside the col name during table creation=============
 Person_ID number(5) FOREIGN KEY REFERENCES Persons(PersonID)
@@ -14,3 +15,22 @@ alter table table_name add constraint
 ===============add primary key with alter=============
 alter table table_name add primary key(col_name);
 
+
+===============add unique constraint with alter=============
+alter table table_name add constraint cs_name unique(col_name);
+
+=============add unique constraint================
+alter table table_name add unique(col_name);
+
+==============add check contraint==========
+alter table table_name ass check(slary>25000);
+
+============add
+
+
+===============add check constraint with alter=============
+alter table table_name add constraint cs_name check(col_name>centienl_value);
+
+==============add unique constraint================
+ALTER TABLE YourTable
+add CONSTRAINT YourTable_unique UNIQUE (B, C, D);
